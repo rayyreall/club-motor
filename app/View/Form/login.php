@@ -15,6 +15,11 @@
                 Invalid username or password!
             </div>
         <?php endif; ?>
+        <?php if (\clubMotor\Helper\SessionHelper::getFlash('success')): ?>
+            <div class="alert alert-success" role="alert">
+                Anda Berhasil Membuat akun!
+            </div>
+        <?php endif; ?>
         <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div class="container">
                 <div class="row justify-content-center">

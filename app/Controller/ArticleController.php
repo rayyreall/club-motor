@@ -8,6 +8,12 @@ class ArticleController
 {
     public function index(): void
     {
-        View::render("Article/index", null);
+        $query = $_GET['q'] ?? null;
+
+        if ($query) {
+            View::render("Article/index", null);
+        } else{
+            echo "Article Not found";
+        }
     }
 }

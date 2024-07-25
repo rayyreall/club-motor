@@ -10,7 +10,7 @@
 
         <div class="row">
             <div class="content col-xl-5 d-flex flex-column justify-content-center">
-                <img src="assets/img/services.png" class="img-fluid" alt="">
+                <img src="/assets/img/services.png" class="img-fluid" alt="">
             </div>
             <div class="col-xl-7">
                 <div class="icon-boxes d-flex flex-column justify-content-center">
@@ -23,7 +23,7 @@
                                     </svg>
                                     <i class="bx bxl-dribbble"></i>
                                 </div>
-                                <h4><a href="">Touring Events</a></h4>
+                                <h4><a href="/article?q=tour">Touring Events</a></h4>
                                 <p>Menyelenggarakan berbagai acara touring yang menantang dan menyenangkan setiap tahun.</p>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                     </svg>
                                     <i class="bx bx-file"></i>
                                 </div>
-                                <h4><a href="">Workshop & Seminar</a></h4>
+                                <h4><a href="/article?q=workshop">Workshop & Seminar</a></h4>
                                 <p>Mengadakan workshop dan seminar edukatif untuk meningkatkan pengetahuan dan keterampilan anggota.</p>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                     </svg>
                                     <i class="bx bx-tachometer"></i>
                                 </div>
-                                <h4><a href="">Bengkel & Perawatan</a></h4>
+                                <h4><a href="/article?q=garage">Bengkel & Perawatan</a></h4>
                                 <p>Kerjasama dengan berbagai bengkel dan ahli otomotif untuk perawatan dan perbaikan kendaraan anggota.</p>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                     </svg>
                                     <i class="bx bx-layer"></i>
                                 </div>
-                                <h4><a href="">Event & Gathering</a></h4>
+                                <h4><a href="/article?q=events">Event & Gathering</a></h4>
                                 <p>Mengadakan event dan gathering rutin untuk mempererat tali persaudaraan antar anggota.</p>
                             </div>
                         </div>

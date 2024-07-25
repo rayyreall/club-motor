@@ -19,4 +19,11 @@ class TestUserModel extends TestCase
         var_dump($user);
         $this->assertIsArray($user);
     }
+    public function testFindByUsername()
+    {
+        $userModel = new \clubMotor\Model\UserModel();
+        $user = $userModel->findByUsername("admin");
+        var_dump($user);
+        $this->assertIsArray($user);
+    }
 }

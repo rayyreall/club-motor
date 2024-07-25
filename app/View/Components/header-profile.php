@@ -16,7 +16,18 @@
                 <li><a class="nav-link scrollto " href="#profile">Profile</a></li>
                 <li><a class="nav-link scrollto " href="#services">Service</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-                <li><a class="getstarted scrollto" href="/auth/login"><?php echo isset($models['username']) ? $models['username'] : "Login/Register"?></a></li>
+                <?php
+                $urlPath = "/auth/login";
+                $info = "Login/Register";
+                $isLogin = false;
+
+                if (\clubMotor\Helper\SessionHelper::get("user")) {
+                    $urlPath = "/auth/logout";
+                    $info = "Logout";
+                    $isLogin = true;
+                }
+                    ?>
+                <li><a <?php echo $isLogin ? "id='logoutLink'" : '' ?>class="getstarted scrollto" href="<?= $urlPath ?>"><?= $info ?></a></li>
 
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>

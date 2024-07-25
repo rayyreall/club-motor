@@ -10,6 +10,13 @@
 <main>
     <div class="container">
 
+        <?php
+        $error = \clubMotor\Helper\SessionHelper::getFlash('error');
+        if ($error): ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $error ?>
+            </div>
+        <?php endif; ?>
         <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
             <div class="container">
                 <div class="row justify-content-center">
@@ -28,7 +35,7 @@
                                     <p class="text-center small">Enter your personal details to create account</p>
                                 </div>
 
-                                <form class="row g-3 needs-validation" novalidate>
+                                <form class="row g-3 needs-validation" method="post" action="/auth/register">
                                     <div class="col-12">
                                         <label for="yourName" class="form-label">Nama</label>
                                         <input type="text" name="name" class="form-control" id="yourName" required>

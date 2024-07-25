@@ -13,7 +13,11 @@
             <li><a href="#events" class="nav-link"><i class="bi bi-calendar-event"></i> Event</a></li>
             <li><a href="#portfolio" class="nav-link"><i class="bi bi-camera"></i> Gallery Photo</a></li>
             <li><a href="#team" class="nav-link"><i class="bi bi-people"></i> Our Client</a></li>
-            <li><a href="/auth/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+
+            <?php
+            $user = \clubMotor\Helper\SessionHelper::get("user");
+            ?>
+            <li><a href="/auth/login" class="nav-link"><i class="bi bi-box-arrow-in-right"></i> <?= isset($user) ? "Logout" : "Login" ?></a></li>
         </ul>
     </nav>
 </aside>

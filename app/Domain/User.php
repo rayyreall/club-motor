@@ -6,7 +6,7 @@ class User
 {
     public int $id;
     public string $username;
-    public string $password;
+    public string|null $password;
     public string $email;
 
     public function getEmail(): string
@@ -45,7 +45,7 @@ class User
         return $this->password;
     }
 
-    public function setPassword(string $password): void
+    public function setPassword(string|null $password): void
     {
         $this->password = $password;
     }
