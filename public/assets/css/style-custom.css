@@ -1,0 +1,274 @@
+/* Update this in your existing CSS file, e.g., `public/assets/css/style-custom.css` */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-company-name {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.hide-sidebar-btn {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar .nav-menu .nav-link:hover {
+    background: #f0f0f0;
+}
+
+.sidebar .nav-menu .nav-link i {
+    margin-right: 10px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+header {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    header {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Update this in your existing CSS file, e.g., `public/assets/css/style-custom.css` */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    z-index: 1000; /* Ensure sidebar is above other elements */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-company-name {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.hide-sidebar-btn {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-menu .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar .nav-menu .nav-link:hover {
+    background: #f0f0f0;
+}
+
+.sidebar .nav-menu .nav-link i {
+    margin-right: 10px;
+}
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+header {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001; /* Ensure hamburger menu is above other elements */
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 6px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%; /* Stretch navbar to full width */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 15px; /* Add some space between the items */
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.navbar .nav-link:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.visible {
+        transform: translateX(0);
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    header {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .nav-link {
+        width: 100%;
+        text-align: left;
+    }
+}
