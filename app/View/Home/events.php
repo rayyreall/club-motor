@@ -1,6 +1,6 @@
 <!-- File: app/View/Home/photos.php -->
 <!-- ======= Photos Section ======= -->
-<section id="photos" class="photos section-bg">
+<section id="events" class="photos section-bg">
     <div class="container">
 
         <div class="section-title">
