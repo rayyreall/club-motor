@@ -9,7 +9,7 @@
 
     <nav class="nav-menu">
         <ul style="list-style-type: none">
-            <li><a href="#home" class="nav-link"><i class="bi bi-house"></i> Home</a></li>
+            <li><a href="#hero" class="nav-link"><i class="bi bi-house"></i> Home</a></li>
             <li><a href="#events" class="nav-link"><i class="bi bi-calendar-event"></i> Event</a></li>
             <li><a href="#portfolio" class="nav-link"><i class="bi bi-camera"></i> Gallery Photo</a></li>
             <li><a href="#team" class="nav-link"><i class="bi bi-people"></i> Our Client</a></li>

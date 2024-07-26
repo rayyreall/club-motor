@@ -11,13 +11,12 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="card px-3 pt-3" style="max-width: 50rem">
         <div class="card-header text-center bg-primary text-white">
-            <h2>Website Artikel</h2>
         </div>
         <!-- News block -->
         <div class="card-body">
             <!-- Featured image -->
             <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4" data-mdb-ripple-color="light">
-                <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="img-fluid" />
+                <img src="<?= $model['article']['photo_url'] ?>" class="img-fluid" />
                 <a href="#!">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -28,93 +27,47 @@
                 <div class="col-6">
                     <a href="" class="text-info">
                         <i class="fas fa-motorcycle"></i>
-                        Touring Event
+                        <?= $model['article']['title'] ?>
                     </a>
                 </div>
 
                 <div class="col-6 text-end">
-                    <u> 15.07.2020</u>
+                    <u>  <?= $model['article']['publication_date'] ?> </u>
                 </div>
             </div>
 
             <!-- Article title and description -->
             <a href="" class="text-dark">
-                <h5>Halaman Touring event</h5>
-
+                <h5>Service <?= $model['article']['title'] ?></h5>
                 <p>
-                    Selamat datang di halaman Touring event. Di sini Anda akan menemukan informasi terbaru tentang acara touring yang akan datang, tips dan trik untuk perjalanan yang aman, dan cerita menarik dari para peserta.
+                    <?= $model['article']['content'] ?>
                 </p>
             </a>
 
             <hr />
-
             <!-- News -->
-            <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                    <div class="col-3">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
-                             class="img-fluid shadow-1-strong rounded" alt="Touring Event 1" />
-                    </div>
+            <?php
+            foreach ($model['articleDetail'] as $articleDetail) {
+            ?>
+                <a href="" class="text-dark">
+                    <div class="row mb-4 border-bottom pb-2">
+                        <div class="col-3">
+                            <img src="<?= $articleDetail->cover_url ?>"
+                                 class="img-fluid shadow-1-strong rounded" alt="Touring Event 2" />
+                        </div>
 
-                    <div class="col-9">
-                        <p class="mb-2"><strong>Touring Event 1</strong></p>
-                        <p>
-                            <u> 15.07.2020</u>
-                        </p>
+                        <div class="col-9">
+                            <p class="mb-2"><strong><?= $articleDetail->name?></strong></p>
+                            <p> <?= \clubMotor\Helper\TextHelper::truncateText($articleDetail->description, 100) ?></p>
+                            <p>
+                                <u> <?= $model['article']['publication_date'] ?></u>
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </a>
-
-            <!-- News -->
-            <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                    <div class="col-3">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
-                             class="img-fluid shadow-1-strong rounded" alt="Touring Event 2" />
-                    </div>
-
-                    <div class="col-9">
-                        <p class="mb-2"><strong>Touring Event 2</strong></p>
-                        <p>
-                            <u> 15.07.2020</u>
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- News -->
-            <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                    <div class="col-3">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
-                             class="img-fluid shadow-1-strong rounded" alt="Touring Event 3" />
-                    </div>
-
-                    <div class="col-9">
-                        <p class="mb-2"><strong>Touring Event 3</strong></p>
-                        <p>
-                            <u> 15.07.2020</u>
-                        </p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- News -->
-            <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                    <div class="col-3">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
-                             class="img-fluid shadow-1-strong rounded" alt="Touring Event 4" />
-                    </div>
-
-                    <div class="col-9">
-                        <p class="mb-2"><strong>Touring Event 4</strong></p>
-                        <p>
-                            <u> 15.07.2020</u>
-                        </p>
-                    </div>
-                </div>
-            </a>
+                </a>
+            <?php
+            }
+            ?>
         </div>
         <!-- News block -->
     </div>
