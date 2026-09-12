@@ -13,7 +13,7 @@
   "require": {
     "php": ">=8",
     "ext-mysqli": "*",
-    "respect/validation": "^2.0"
+    "respect/validation": "^3.0"
   },
   "autoload": {
     "psr-4": {
